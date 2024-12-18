@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خدمات كتابة السيرة الذاتية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Dancing+Script:wght@400..700&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/pexels-sora-shimazaki-5673502.jpg" as="image">
+    <link rel="shortcut icon" href="assets/صورة واتساب بتاريخ 1446-06-16 في 20.13.52_116b222c_preview_rev_1.png" type="image/x-icon">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      /* الخطوط والألوان */
+      html,body{
+        overflow-x: hidden;
+      }
+      img{
+        user-select: none;
+      }
+      body {
+        font-family: "Cairo", serif;
+        background-color: #1dcec5;
+        color: white;
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #ffd700;
+      }
+
+      .navbar {
+        background-color: #aca76d; /* لون الهيدر */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* ظل للهيدر */
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+      }
+
+      /* تصميم اللوجو */
+      .navbar-brand img {
+        width: 80px; /* حجم اللوجو */
+        height: auto;
+      }
+
+      /* تصميم عناصر الناف */
+      .navbar-nav .nav-link {
+        color: #ffd700 !important; /* لون الخط */
+        font-weight: bold; /* جعل الخط سميك */
+        transition: color 0.3s ease; /* تأثير التغيير */
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #ffffff !important; /* تغيير اللون عند التحريك */
+      }
+
+      /* ترتيب العناصر */
+      .navbar-brand {
+        margin-right: 0; /* اللوجو إلى أقصى اليمين */
+      }
+
+      .navbar-collapse {
+        justify-content: flex-start; /* دفع القائمة لأقصى الشمال */
+      }
+
+      /* زر التوجل */
+      .navbar-toggler {
+        border: none; /* لون حدود الزر */
+        outline: none;
+        order: -1; /* تغيير ترتيب زر التوجل */
+      }
+      .navbar-toggler:focus {
+        border: none;
+        outline: none;
+      }
+
+      .navbar-toggler-icon {
+        /* color: #ffd700; */
+        font-size: 24px;
+      }
+
+      /* ترتيب الهاتف */
+      @media (max-width: 992px) {
+        .navbar-brand {
+          margin-right: auto; /* اللوجو في أقصى اليمين */
+        }
+        .navbar-toggler {
+          margin-left: auto; /* زر التوجل في أقصى اليسار */
+        }
+      }
+
+      .hero-section {
+        background-image: url("assets/pexels-sora-shimazaki-5673502.jpg"); /* استبدل بمسار الصورة */
+        background-size: cover; /* لجعل الصورة تغطي القسم بالكامل */
+        background-position: center; /* توسيط الصورة */
+        background-repeat: no-repeat;
+        height: 100vh; /* القسم بطول الشاشة بالكامل */
+        position: relative;
+        color: white; /* لون النص */
+        
+      }
+
+      /* إضافة طبقة شفافة */
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 38, 71, 0.6); /* لون غامق شفاف لتحسين وضوح النص */
+        z-index: 1;
+      }
+
+      .hero-section .container {
+        position: relative;
+        z-index: 2; /* النص فوق الطبقة الشفافة */
+      }
+
+      /* تحسين النص */
+      .hero-title {
+        font-size: 3rem; /* حجم العنوان */
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #ffd700; /* اللون الذهبي */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* ظل للنص */
+      }
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+        color: #dbff0f;
+      }
+
+      #about {
+        background-color: #f1f8ff;
+        padding: 40px 0;
+        border-radius: 15px;
+      }
+
+      .section-header h2 {
+        font-size: 3rem;
+        color: #0a2647;
+      }
+
+      .section-header p {
+        font-size: 1.2rem;
+        color: #6c757d;
+      }
+      /* about */
+      /* عام: تنسيقات عامة */
+      #about {
+        background-color: #f9f9f9; /* لون خلفية فاتح للقسم */
+        padding: 50px 0; /* تباعد علوي وسفلي */
+        color: #333; /* لون النص */
+        font-family: "Tajawal", Arial, sans-serif; /* اختيار خط عربي حديث */
+      }
+
+      .section-header h2 {
+        font-weight: 700;
+        color: #00796b; /* لون مميز للعناوين */
+      }
+
+      .section-header p {
+        color: #555; /* لون نص العنوان الفرعي */
+      }
+
+      /* توزيع الصورة والنص */
+      #about .row {
+        display: flex;
+        align-items: center; /* توسيط عمودي */
+        justify-content: space-between;
+      }
+
+      #about img {
+        max-width: 100%; /* تأكد من ضبط حجم الصورة */
+        height: auto;
+        border-radius: 15px; /* حواف دائرية خفيفة */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+      }
+
+      #about h4 {
+        font-size: 1.8rem;
+        color: #00796b; /* لون رئيسي للنص */
+        margin-bottom: 15px;
+      }
+
+      #about p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #444; /* لون أغمق قليلاً للقراءة */
+      }
+
+      #about ul {
+        list-style: none; /* إزالة العلامات */
+        padding: 0;
+      }
+
+      #about ul li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+        color: #555;
+      }
+
+      #about ul li::before {
+        content: "✓"; /* رمز تحقق */
+        position: absolute;
+        right: -15px;
+        color: #00796b; /* لون أيقونة الرمز */
+        font-weight: bold;
+      }
+          @media(max-width:767px) {
+            .about_lang{
+                text-align: center;
+            }
+          }
+      /* الخدمات */
+      /* تصميم القسم الكامل */
+      .full-width-section {
+        background-color: #f9f9f9;
+        padding: 60px 0; /* تباعد علوي وسفلي */
+        margin-top: 30px; /* تباعد عن القسم السابق */
+        width: 100%;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        color: #00796b;
+        margin-bottom: 40px;
+        font-weight: 700;
+      }
+
+      /* تصميم البطاقات */
+      .service-card {
+        background-color: #fff;
+        border: 1px solid #e3e3e3;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .service-card .icon i {
+        color: #00796b; /* لون الأيقونات */
+      }
+
+      .service-card h3 {
+        font-size: 1.6rem;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .service-card p {
+        color: #555;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      /* additional services */
+      #additional-services {
+        background-color: #0e1f2d; /* خلفية داكنة */
+        color: #fff; /* النص باللون الأبيض */
+      }
+
+      #additional-services h4 {
+        color: #ffcc66; /* لون العناوين */
+        font-weight: bold;
+      }
+
+      #additional-services ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #additional-services ul li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      #additional-services ul li::before {
+        content: "\2022"; /* رمز النقطة */
+        color: #ffcc66; /* نفس لون العناوين */
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      /* why us */
+      #why-us {
+        background-color: #0e1f2d;
+        color: #fff;
+        margin-top: 50px; /* مسافة بين السكشن السابق */
+        padding-top: 30px; /* مسافة داخلية علوية */
+        padding-bottom: 50px; /* مسافة داخلية سفلية */
+      }
+
+      #why-us h4 {
+        color: #ffcc66;
+        font-weight: bold;
+      }
+
+      .card {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card i {
+        margin-bottom: 15px;
+      }
+
+      /* our works */
+      #our-works {
+  background: linear-gradient(to right, #2a3d56, #1f2b3e); /* خلفية متدرجة */
+  color: #fff;
+  padding: 60px 0;
+  width: 100%;
+}
+
+#our-works .section-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffcc66;
+  margin-bottom: 20px;
+}
+
+#our-works .section-header p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+}
+
+.swiper-container {
+  width: 100%; /* العرض 100% */
+  height: 400px; /* ارتفاع السكشن */
+  overflow: hidden; /* إخفاء الصور الزائدة عن حدود السكشن */
+}
+
+.swiper-wrapper {
+  display: flex; /* عرض الصور في صف واحد */
+}
+
+.swiper-slide {
+  width: 100%; /* كل صورة تغطي 100% من مساحة السكشن */
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  width: 100%; /* ملائمة الصورة داخل الـ swiper */
+  border-radius: 10px;
+  object-fit: cover; /* الحفاظ على النسب المناسبة للصورة */
+}
+
+
+
+
+      footer {
+        background-color: #0a1c32;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      footer a {
+        color: #ffd700;
+        text-decoration: none;
+      }
+      .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #34495e; /* لون الخلفية */
+        color: #fff; /* لون السهم */
+        border-radius: 50%; /* لجعل الدائرة مستديرة */
+        width: 40px;
+        height: 40px;
+        display: flex; /* استخدام Flexbox */
+        align-items: center !important; /* محاذاة رأسية */
+        justify-content: center !important; /* محاذاة أفقية */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .scroll-to-top:hover {
+        background-color:  #aca76d; /* تغيير اللون عند التمرير */
+        transform: scale(1.1); /* تكبير بسيط */
+      }
+
+      .scroll-to-top i {
+        font-size: 20px; /* حجم السهم */
+        position: absolute;
+        left: 23%;
+        top: 15%;
+      }
+      @media (max-width: 767px) {
+        .scroll-to-top {
+          width: 30px;
+          height: 30px;
+        }
+        .scroll-to-top i {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- الهيدر -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- زر التوجل (للهاتف) -->
+        <button style="border: none; font-size: 1.5rem;"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="تبديل التنقل"
+        >
+          <!-- <span class="navbar-toggler-icon"> -->
+            <i class="ri-menu-3-line"></i>
+            <!-- أيقونة ريمكس -->
+          </span>
+        </button>
+        <!-- اللوجو في أقصى اليمين -->
+        <a class="navbar-brand" href="#">
+          <img 
+            src="assets/صورة واتساب بتاريخ 1446-06-16 في 20.13.52_116b222c_preview_rev_1.png"
+            alt="لوجو الموقع"
+          />
+        </a>
+        <!-- قائمة التنقل -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">من نحن</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">خدماتنا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#additional-services">خدمات إضافية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#why-us">لماذا نحن</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#our-works">اعمالنا </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">اتصل بنا</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header
+      class="hero-section d-flex justify-content-center align-items-center text-center"
+    >
+      <div class="container hero__text">
+        <h1 class="hero-title">سفراء المستقبل</h1>
+        <p class="hero-subtitle">
+          نأخذ بيدك نحو وظيفة أحلامك بخطوات واضحة ومحترفة
+        </p>
+      </div>
+    </header>
+    <!-- عنا -->
+    <section id="about" class="container py-5">
+      <div class="section-header text-center mb-5 about_texto">
+        <h2 class="display-4 ">من نحن</h2>
+        <p class="lead">
+          مؤسسة سفراء المستقبل هو أكثر من مجرد اسم. هو بوابة تحوّل طموحاتك إلى
+          واقع، وخبراتك إلى قصص ملهمة تُروى للعالم.
+        </p>
+      </div>
+
+      <div class="row align-items-center">
+        <!-- Image on the Left -->
+        <div class="col-md-6 text-center mb-4">
+          <img loading="lazy" 
+            src="assets/صورة واتساب بتاريخ 1446-06-16 في 22.01.34_f0d0563b.jpg"
+            alt="سيرة ذاتية"
+            class="img-fluid rounded-circle about_img"
+            style="max-width: 300px"
+          />
+        </div>
+
+        <!-- Text on the Right -->
+        <div class="col-md-6 about_lang">
+          <h4>خدمات احترافية</h4>
+          <p>
+            نقدم لك خدمات كتابة وتصميم سير ذاتية احترافية بنظام ATS وبأعلى
+            معايير الجودة لضمان وصولك إلى أهدافك. نوفر لك سعرًا مرنًا ونتائج
+            تتفوق التوقعات.
+          </p>
+          <ul>
+            <li>تصميمات حديثة وعصرية.</li>
+            <li>ملفات LinkedIn جاهزة للتألق.</li>
+            <li>رسائل احترافية لبداية ناجحة.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- services  -->
+    <section id="services" class="full-width-section">
+      <div class="section-header text-center mb-5">
+        <h2 class="display-4 services_texto">خدماتنا الأساسية</h2>
+      </div>
+      <div class="container">
+        <div class="row services_card">
+          <!-- الخدمة 1 -->
+          <div class="col-lg-6 mb-4">
+            <div
+              class="service-card d-flex align-items-center p-4 shadow rounded"
+            >
+              <div class="icon me-4">
+                <i class="fas fa-file-alt fa-3x text-primary"></i>
+              </div>
+              <div>
+                <h3>سيرة ذاتية احترافية</h3>
+                <p>تصميم سيرة ذاتية تبرز مهاراتك بوضوح واحترافية.</p>
+              </div>
+            </div>
+          </div>
+          <!-- الخدمة 2 -->
+          <div class="col-lg-6 mb-4">
+            <div
+              class="service-card d-flex align-items-center p-4 shadow rounded"
+            >
+              <div class="icon me-4">
+                <i class="fas fa-comments fa-3x text-primary"></i>
+              </div>
+              <div>
+                <h3>المقابلات الوظيفية</h3>
+                <p>
+                  نساعدك في اجتياز المقابلات بنجاح من خلال التدريب والتحضير.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- الخدمة 3 -->
+          <div class="col-lg-6 mb-4">
+            <div
+              class="service-card d-flex align-items-center p-4 shadow rounded"
+            >
+              <div class="icon me-4">
+                <i class="fas fa-briefcase fa-3x text-primary"></i>
+              </div>
+              <div>
+                <h3>استشارات مهنية</h3>
+                <p>تقديم استشارات متخصصة لتحسين مسارك المهني.</p>
+              </div>
+            </div>
+          </div>
+          <!-- الخدمة 4 -->
+          <div class="col-lg-6 mb-4">
+            <div
+              class="service-card d-flex align-items-center p-4 shadow rounded"
+            >
+              <div class="icon me-4">
+                <i class="fab fa-linkedin fa-3x text-primary"></i>
+              </div>
+              <div>
+                <h3>تحسين الملف الشخصي</h3>
+                <p>إنشاء وتحسين ملفك الشخصي على LinkedIn لجذب أفضل الفرص.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- additional services -->
+    <section
+      id="additional-services"
+      class="container-fluid py-5"
+      style="background-color: #0e1f2d; color: #fff"
+    >
+      <div class="text-center mb-5">
+        <h2 class="display-4 addservices_texto" style="color: #ffcc66">خدمات إضافية</h2>
+      </div>
+      <div class="row text-center addservices_card">
+        <!-- خدمات السيرة الذاتية -->
+        <div class="col-md-3 mb-4">
+          <h4 class="mb-3" style="color: #ffcc66">خدمات السيرة الذاتية</h4>
+          <ul class="list-unstyled">
+            <li>تحديث دوري للسيرة الذاتية</li>
+            <li>تدقيق السيرة الذاتية</li>
+            <li>تحليل مهارات التوظيف</li>
+            <li>كتابة Cover Letter</li>
+          </ul>
+        </div>
+        <!-- خدمات لينكدإن -->
+        <div class="col-md-3 mb-4">
+          <h4 class="mb-3" style="color: #ffcc66">خدمات لينكدإن</h4>
+          <ul class="list-unstyled">
+            <li>إنشاء وتحسين الحساب</li>
+            <li>إدارة ملف لينكدإن</li>
+            <li>كتابة محتوى الملف الشخصي</li>
+            <li>تعزيز ظهور الحساب</li>
+          </ul>
+        </div>
+        <!-- خدمات التصميم -->
+        <div class="col-md-3 mb-4">
+          <h4 class="mb-3" style="color: #ffcc66">خدمات التصميم</h4>
+          <ul class="list-unstyled">
+            <li>تصميم ملف شخصي مهني</li>
+            <li>تصميم هوية مرئية</li>
+            <li>إنشاء قوالب للسيرة الذاتية</li>
+            <li>تصميم غلاف LinkedIn</li>
+          </ul>
+        </div>
+        <!-- خدمات المقابلات -->
+        <div class="col-md-3 mb-4">
+          <h4 class="mb-3" style="color: #ffcc66">خدمات المقابلات</h4>
+          <ul class="list-unstyled">
+            <li>تنظيم محاكاة مقابلات عمل</li>
+            <li>إعداد دليل المقابلات</li>
+            <li>تدريب على المقابلات الشخصية</li>
+            <li>تطوير المهارات الشخصية</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- why us -->
+    <section
+      id="why-us"
+      class="container-fluid py-5"
+      style="background-color: #0e1f2d; color: #fff"
+    >
+      <div class="text-center mb-5 why-us_texto">
+        <h2 class="display-4" style="color: #ffcc66">لماذا نحن؟</h2>
+        <p class="lead">
+          نحن لا نكتب فقط سيرتك الذاتية... نحن نعيد بناء صورتك المهنية من الصفر
+        </p>
+      </div>
+      <div class="row text-center why-us_card">
+        <!-- بطاقة 1 -->
+        <div class="col-md-3 mb-4">
+          <div
+            class="card border-0 shadow-lg p-3"
+            style="background-color: #142736; color: #fff"
+          >
+            <div class="mb-3">
+              <i class="fas fa-users fa-3x" style="color: #ffcc66"></i>
+            </div>
+            <h4>خدمات موجهة</h4>
+            <p>خدماتنا تناسب كل فئة ومستوى وظيفي لتلبية احتياجاتك بدقة.</p>
+          </div>
+        </div>
+        <!-- بطاقة 2 -->
+        <div class="col-md-3 mb-4">
+          <div
+            class="card border-0 shadow-lg p-3"
+            style="background-color: #142736; color: #fff"
+          >
+            <div class="mb-3">
+              <i class="fas fa-layer-group fa-3x" style="color: #ffcc66"></i>
+            </div>
+            <h4>منصة شاملة</h4>
+            <p>كل ما تحتاجه في مكان واحد دون الحاجة للبحث عن بدائل.</p>
+          </div>
+        </div>
+        <!-- بطاقة 3 -->
+        <div class="col-md-3 mb-4">
+          <div
+            class="card border-0 shadow-lg p-3"
+            style="background-color: #142736; color: #fff"
+          >
+            <div class="mb-3">
+              <i class="fas fa-star fa-3x" style="color: #ffcc66"></i>
+            </div>
+            <h4>جودة عالية</h4>
+            <p>نقدم خدمات بجودة عالية وأسعار تنافسية تناسب جميع الفئات.</p>
+          </div>
+        </div>
+        <!-- بطاقة 4 -->
+        <div class="col-md-3 mb-4">
+          <div
+            class="card border-0 shadow-lg p-3"
+            style="background-color: #142736; color: #fff"
+          >
+            <div class="mb-3">
+              <i class="fas fa-check-circle fa-3x" style="color: #ffcc66"></i>
+            </div>
+            <h4>التزام بالنتائج</h4>
+            <p>نضمن لك رضاك التام مع نتائج تلبي توقعاتك <br />بالكامل.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- our works -->
+    <section id="our-works">
+        <div class="section-header text-center our-work_texto">
+          <h2>أعمالنا</h2>
+          <p class="lead">نحن فخورون بما نقدمه من خدمات ونتائج ملموسة لعملائنا.</p>
+        </div>
+      
+        <div class="swiper-container our-work_card">
+          <div class="swiper-wrapper">
+            <!-- إضافة الصور في swiper slide -->
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work1">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work2">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <div class="swiper-slide">
+              <img loading="lazy" src="assets/pexels-airamdphoto-16450744.jpg" alt="work3">
+            </div>
+            <!-- إضافة باقي الصور بنفس الطريقة -->
+          </div>
+      
+
+        </div>
+      </section>
+      
+
+    <!-- تواصل معنا -->
+    <footer id="contact">
+      <div class="container" >
+        <p class="contact">
+          للتواصل معنا عبر البريد الإلكتروني:
+          <a href="mailto:Future.afds@gmail.com">Future.afds@gmail.com</a>
+        </p>
+        <p class="copy">
+            &copy; 2024 جميع الحقوق محفوظة لسفراء المستقبل  
+            | تم تطويره بواسطة  
+        <a  href="https://wa.me/+201556477029" target="_blank"> <span style="font-weight: bold;">Eng: Saad Harera</span> </a>   
+          </p>
+          
+      </div>
+    </footer>
+ <!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
+ <div class="scroll-to-top kolo" style="display: none">
+    <i class="ri-arrow-up-line"></i>
+  </div>
+
+  <script>
+    const scrollbtn = document.querySelector(".kolo");
+    window.addEventListener("scroll", () => {
+      if (scrollY >= 1000) {
+        scrollbtn.style.display = "block";
+      } else {
+        scrollbtn.style.display = "none";
+      }
+    });
+
+    scrollbtn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    };
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="js/scrollreveal.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
