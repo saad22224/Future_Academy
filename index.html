@@ -382,6 +382,7 @@ a.tele i {
   list-style-type: none;
 }
 
+
 #additional-services ul li {
   margin-bottom: 10px;
   font-size: 1rem;
@@ -391,7 +392,11 @@ a.tele i {
   justify-content: flex-start; /* توسيط الأيقونة على اليمين */
   align-items: center;
 }
-
+@media (max-width: 767px) {
+  #additional-services ul li{
+    margin-right: 20px;
+  }
+}
 .service-item {
   display: flex;
   align-items: center;
