@@ -46,7 +46,17 @@ const swiper1 = new Swiper('#swiper1', {
 });
 
 // تهيئة FancyBox (لمعرض الصور)
+$('[data-fancybox="services"]').fancybox({
+  buttons: ['zoom', 'share', 'slideShow', 'fullScreen', 'close'],
+  loop: true,
+});
+// تهيئة FancyBox (لمعرض الصور)
 $('[data-fancybox="gallery"]').fancybox({
+  buttons: ['zoom', 'share', 'slideShow', 'fullScreen', 'close'],
+  loop: true,
+});
+// تهيئة FancyBox (لمعرض الصور)
+$('[data-fancybox="work"]').fancybox({
   buttons: ['zoom', 'share', 'slideShow', 'fullScreen', 'close'],
   loop: true,
 });
