@@ -1,6 +1,6 @@
 
   var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,   // عدد الصور المعروضة في كل مرة
+    slidesPerView: 5,   // عدد الصور المعروضة في كل مرة
     spaceBetween: 20,    // المسافة بين الصور
 
     loop: true,          // تكرار السلايدر بشكل مستمر
@@ -9,13 +9,13 @@
     },
     breakpoints: {
       768: {
-        slidesPerView: 2, // عرض 2 صورة في الشاشات الصغيرة
+        slidesPerView: 4, // عرض 2 صورة في الشاشات الصغيرة
       },
       480: {
-        slidesPerView: 1, // عرض 1 صورة في الشاشات الصغيرة جدًا
+        slidesPerView: 3, // عرض 1 صورة في الشاشات الصغيرة جدًا
       },
       375: {
-        slidesPerView: 1, // عرض 1 صورة في الشاشات الصغيرة جدًا
+        slidesPerView: 2, // عرض 1 صورة في الشاشات الصغيرة جدًا
       },
       400: {
         slidesPerView: 1, // عرض 1 صورة في الشاشات الصغيرة جدًا
@@ -27,7 +27,29 @@
   });
 
 
+//   SERVICES SWIPER
+// تهيئة سوايبر
+const swiper1 = new Swiper('#swiper1', {
+  loop: true,
+  autoplay: {
+      delay: 3000,
+      spaceBetween: 20, 
+  },
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+  },
+});
 
+// تهيئة FancyBox (لمعرض الصور)
+$('[data-fancybox="gallery"]').fancybox({
+  buttons: ['zoom', 'share', 'slideShow', 'fullScreen', 'close'],
+  loop: true,
+});
 
 //   scroll
 
@@ -56,3 +78,16 @@ const sr = ScrollReveal({
   sr.reveal(".copy" ,  { origin: "top" });
 
 
+// whats app button
+        // وظيفة لإعادة تشغيل اهتزاز الزر كل 10 ثوانٍ
+        const button = document.querySelector('.whatsapp-button');
+        setInterval(() => {
+            button.classList.add('shake');
+            setTimeout(() => button.classList.remove('shake'), 500); // إزالة الاهتزاز بعد انتهاءه
+        }, 10000);
+
+
+
+
+
+      
