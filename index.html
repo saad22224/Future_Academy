@@ -388,7 +388,7 @@ a.tele i {
   position: relative;
   padding-left: 20px;
   display: flex;
-  justify-content: space-between; /* توسيط الأيقونة على اليمين */
+  justify-content: flex-start; /* توسيط الأيقونة على اليمين */
   align-items: center;
 }
 
@@ -445,7 +445,27 @@ a.tele i {
       .card i {
         margin-bottom: 15px;
       }
+/* our client */
 
+
+#our-clients {
+  background: linear-gradient(to right, #2a3d56, #1f2b3e); /* خلفية متدرجة */
+  color: #fff;
+  padding: 60px 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#our-clients  .section-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffcc66;
+  margin-bottom: 20px;
+}
+
+#our-clients  .section-header p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+}
       /* our works */
       #our-works {
   background: linear-gradient(to right, #2a3d56, #1f2b3e); /* خلفية متدرجة */
@@ -574,11 +594,11 @@ a.tele i {
 
         .fixed-container span {
             font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
+            font-size: 12px;
             margin-right: 12px; /* مسافة بين النص والزر */
             color: #333;
             background-color: #fff;
-            padding: 8px 12px;
+            padding: 6px 10px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             white-space: nowrap; /* منع النص من الالتفاف */
@@ -697,6 +717,9 @@ a.tele i {
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#why-us">لماذا نحن</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#our-clients">عملاؤنا </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#our-works">اعمالنا </a>
@@ -942,7 +965,7 @@ a.tele i {
 >
   <div class="text-center mb-5 why-us_texto">
     <h2 class="display-4" style="color: #ffcc66">لماذا نحن؟</h2>
-    <p class="lead">
+    <p class="lead" style="font-weight: bold;">
     <br>  نحن لا نكتب فقط سيرتك الذاتية... نحن نعيد بناء صورتك المهنية من الصفر
     <br>
       هل تعلم أن 80% من الشركات ترفض السير الذاتية غير الاحترافية؟ اجعل سيرتك تتحدث عنك!"
@@ -1010,10 +1033,10 @@ a.tele i {
     </div>
   </div>
 </section>
-<!-- our works -->
-<section id="our-works">
+<!-- our-clients-->
+<section id="our-clients">
     <div class="section-header text-center our-work_texto">
-      <h2>أعمالنا</h2>
+      <h2>عملاؤنا</h2>
       <p class="lead">نحن فخورون بما نقدمه من خدمات ونتائج ملموسة لعملائنا.</p>
     </div>
   
@@ -1021,84 +1044,235 @@ a.tele i {
       <div class="swiper-wrapper">
         <!-- إضافة الصور في swiper slide -->
         <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0003.jpg" data-fancybox="gallery">
           <img loading="lazy" src="assets/IMG-20241219-WA0003.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0014.jpg" alt="work2">
-        </div>
-     
-        <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0015.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0014.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0014.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0016.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0015.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0015.jpg" alt="work1">
+          <a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0017.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0017.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0017.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0018.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0018.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0018.jpg" alt="work2">
-        </div>
-     
-        <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0019.jpg" alt="work2">
-        </div>
-     
-        <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0020.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0019.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0019.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0021.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0020.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0020.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0022.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0021.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0021.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0023.jpg" alt="work2">
-        </div>
-     
-        <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0024.jpg" alt="work2">
-        </div>
-     
-        <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0025.jpg" alt="work2">
-        </div>
-     
-        <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0026.jpg" alt="work2">
-        </div>
-     
-        <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0027.jpg" alt="work2">
-        </div>
-     
-        <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0028.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0022.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0022.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0029.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0023.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0023.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0030.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0024.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0024.jpg" alt="work1">
+          <a>
+        </div>
+
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0026.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0026.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0031.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0027.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0027.jpg" alt="work1">
+          <a>
+        </div>
+
+      
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0029.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0029.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0031.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0030.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0030.jpg" alt="work1">
+          <a>
         </div>
         <div class="swiper-slide">
-          <img loading="lazy" src="assets/IMG-20241219-WA0032.jpg" alt="work2">
+          <a href="assets/IMG-20241219-WA0031.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0031.jpg" alt="work1">
+          <a>
         </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0032.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0032.jpg" alt="work1">
+          <a>
+        </div>
+       
+      
         <!-- إضافة باقي الصور بنفس الطريقة -->
       </div>
   
     </div>
-    <P style="color: beige; margin: 20px auto; text-align: center;">لا تدع الفرصة تفوتك – انضم لعملائنا الناجحين
+    <P style="color: beige; margin: 10px auto; text-align: center; transform: translateY(-290%);">لا تدع الفرصة تفوتك – انضم لعملائنا الناجحين
        الآن!</P>
            <!-- زر الإجراء -->
-<div class="cta-button-container" style="display: flex; justify-content: center;">
+<div class="cta-button-container" style="display: flex; justify-content: center; transform: translateY(-120%);">
+  <a href="https://wa.me/+966539910897" style="text-decoration: none;" target="_blank">
+
+    <button class="cta-button" id="ctaButton">
+        <i class="ri-time-line"></i> <!-- أيقونة الساعة -->
+       أنضم الأن !
+    </button>
+  </a>
+
+</div>
+  </section>
+  
+<!-- our-works-->
+<section id="our-works">
+    <div class="section-header text-center our-work_texto">
+      <h2>اعمالنا</h2>
+      <p class="lead">"نلتزم بتقديم حلول مبتكرة ونتائج استثنائية تلبّي تطلعات عملائنا وتفوق توقعاتهم."</p>
+    </div>
+  
+    <div class="swiper-container our-work_card">
+      <div class="swiper-wrapper">
+        <!-- إضافة الصور في swiper slide -->
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0003.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0003.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0014.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0014.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0015.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0015.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0016.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0016.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0017.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0017.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0018.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0018.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0019.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0019.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0020.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0020.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0021.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0021.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0022.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0022.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0023.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0023.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0024.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0024.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0025.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0025.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0026.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0026.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0027.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0027.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0028.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0028.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0029.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0029.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0030.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0030.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0031.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0031.jpg" alt="work1">
+          <a>
+        </div>
+        <div class="swiper-slide">
+          <a href="assets/IMG-20241219-WA0032.jpg" data-fancybox="gallery">
+          <img loading="lazy" src="assets/IMG-20241219-WA0032.jpg" alt="work1">
+          <a>
+        </div>
+       
+      
+        <!-- إضافة باقي الصور بنفس الطريقة -->
+      </div>
+  
+    </div>
+    <P style="color: beige; margin: 10px auto; text-align: center; transform: translateY(-290%);">لا تدع الفرصة تفوتك – انضم لعملائنا الناجحين
+       الآن!</P>
+           <!-- زر الإجراء -->
+<div class="cta-button-container" style="display: flex; justify-content: center; transform: translateY(-120%);">
   <a href="https://wa.me/+966539910897" style="text-decoration: none;" target="_blank">
 
     <button class="cta-button" id="ctaButton">
@@ -1126,21 +1300,28 @@ a.tele i {
       
   </div>
 </footer>
-<div class="fixed-container">
-  <a href="https://wa.me/+966539910897" target="_blank" class="whatsapp-button">
-    <i class="ri-whatsapp-line"></i> <!-- أيقونة واتساب -->
-  </a>
-  <span>إضغط لإستشارتك المجانية</span>
-</div>
-<!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
-<div class="scroll-to-top kolo" style="display: none">
-<i class="ri-arrow-up-line"></i>
-</div>
+
 
     </div>
-   
-  <script>
-    const scrollbtn = document.querySelector(".kolo");
+    <div class="fixed-container">
+      <a href="https://wa.me/+966539910897" target="_blank" class="whatsapp-button">
+        <i class="ri-whatsapp-line"></i> <!-- أيقونة واتساب -->
+      </a>
+      <span>إضغط لإستشارتك المجانية</span>
+    </div>
+    <!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
+    <div class="scroll-to-top kolo" style="display: none">
+    <i class="ri-arrow-up-line"></i>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" defer></script>
+     <script src="js/swiper.js" defer></script>
+    <script src="js/scrollreveal.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>
+<script src="js/butter.js" ></script>
+<script>
+      const scrollbtn = document.querySelector(".kolo");
     window.addEventListener("scroll", () => {
       if (scrollY >= 750) {
         scrollbtn.style.display = "block";
@@ -1157,16 +1338,6 @@ a.tele i {
       });
     };
 
-  </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script> -->
-     <script src="js/swiper.js" defer></script>
-    <script src="js/scrollreveal.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/main.js" defer></script>
-<script src="js/butter.js" ></script>
-<script>
   butter.init()
 </script>
   </body>
