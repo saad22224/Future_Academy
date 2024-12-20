@@ -295,47 +295,32 @@
         font-size: 1rem;
         line-height: 1.6;
       }
-
       #swiper1 {
     display: flex;
-    justify-content: center; /* لجعل السوايبر في المنتصف */
+    justify-content: center;
     align-items: center;
-    width: 100vw; /* عرض السوايبر 70% من العرض الكلي */
-    height: 500px; /* تغيير الارتفاع حسب الحاجة */
+    width: 100vw; /* عرض السوايبر ليشغل الشاشة بالكامل */
+    height: 500px;
     margin-bottom: 20px;
     position: relative;
+    overflow: hidden; /* إخفاء أي عناصر تتجاوز حدود السوايبر */
 }
 
 #swiper1 img {
-    width: 80%; /* تصغير حجم الصورة بنسبة 80% من عرض السوايبر */
-    max-width: 600px; /* الحد الأقصى للعرض */
-    height: auto;
-    margin: 0 auto; /* جعل الصور في المنتصف */
+    width: 100%; /* جعل الصور تملأ عرض السوايبر بالكامل */
+    height: 100%; /* جعل الصور تملأ ارتفاع السوايبر بالكامل */
+    object-fit: cover; /* الحفاظ على تناسب الصورة داخل المساحة */
     border-radius: 8px;
-    transform: translateX(-10%);
-    object-fit: cover; /* للحفاظ على تناسب الصورة داخل المساحة */
 }
 
-@media(max-width:767px){
-  #swiper1 {
-    display: flex;
-    justify-content: center; /* لجعل السوايبر في المنتصف */
-    align-items: center;
-    width: 100vw; /* عرض السوايبر 70% من العرض الكلي */
-    height: 500px; /* تغيير الارتفاع حسب الحاجة */
-    margin-bottom: 20px;
-    position: relative;
+/* استجابة للأجهزة الصغيرة */
+@media(max-width: 767px) {
+    #swiper1 {
+        height: 300px; /* تقليل ارتفاع السوايبر على الشاشات الصغيرة */
+    }
+
 }
 
-#swiper1 img {
-    width: 100%; /* تصغير حجم الصورة بنسبة 80% من عرض السوايبر */
-    max-width: 600px; /* الحد الأقصى للعرض */
-    height: auto;
-    margin: 0 auto; /* جعل الصور في المنتصف */
-    border-radius: 8px;
-    object-fit: cover; /* للحفاظ على تناسب الصورة داخل المساحة */
-}
-}
       @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap');
 
 a.tele {
